@@ -128,8 +128,8 @@
                     <div class="valid-feedback">{{ translations['Looks good!'] }}</div>
                 </div>
                 <div class="text-center">
-                    <a href="{{ url_for('step1') }}" class="btn btn-secondary">Back</a>
-                    {{ form.submit(class="btn btn-primary") }}
+                    <a href="{{ url_for('step1') }}" class="btn btn-secondary">{{ translations['Back'] }}</a>
+                    {{ form.submit(class="btn btn-primary", value=translations['Next']) }}
                 </div>
             </form>
         </div>
