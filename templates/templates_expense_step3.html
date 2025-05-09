@@ -66,8 +66,8 @@
         .info-icon:hover { color: #2E7D32; }
         .tooltip-text { visibility: hidden; width: 220px; background: #555; color: #fff; text-align: center; border-radius: 6px; padding: 10px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -110px; opacity: 0; transition: opacity 0.3s; }
         .info-icon:hover .tooltip-text { visibility: visible; opacity: 1; }
-        .expense-table { margin-bottom: 20px; }
-        .expense-table th, .expense-table td { padding: 10px; text-align: left; }
+        .expense-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .expense-table th, .expense-table td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
         .expense-table th { background: #e9ecef; }
         @media (max-width: 576px) { .container { padding: 10px; } .form-card { padding: 1rem; } .btn-primary, .btn-secondary { font-size: 1rem; } }
     </style>
@@ -120,8 +120,8 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="{{ url_for('step2') }}" class="btn btn-secondary">Back</a>
-                    {{ form.submit(class="btn btn-primary") }}
+                    <a href="{{ url_for('step2') }}" class="btn btn-secondary">{{ translations['Back'] }}</a>
+                    {{ form.submit(class="btn btn-primary", value=translations['Review & Submit']) }}
                 </div>
             </form>
         </div>
